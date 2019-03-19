@@ -168,6 +168,15 @@ variable "worker_sg_ingress_from_port" {
   default     = "1025"
 }
 
+variable "workers_addtional_policies"{
+  description = "Additional policies to be added to workers"
+  type = "list"
+  default = []
+}
+variable "workers_addtional_policies_count" {
+  default = 0
+}
+
 variable "kubeconfig_aws_authenticator_command" {
   description = "Command to use to fetch AWS EKS credentials."
   default     = "aws-iam-authenticator"
